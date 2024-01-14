@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Task 4</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    ></script>
+    <body>
+        <form>
+            <label>
+                <input type="checkbox" class="custom-checkbox">
+                Люблю HTLM
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" class="custom-checkbox">
+                Не люблю HTLM
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" class="custom-checkbox">
+                Люблю CSS
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" class="custom-checkbox">
+                Не люблю CSS
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" class="custom-checkbox">
+                Люблю JS
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" class="custom-checkbox">
+                Не люблю JS
+            </label>
+        </form>
+        <script>
+            $(document).ready(function() {
+                $('.custom-checkbox').change(function() {
+                    const checkedCount = $('.custom-checkbox:checked').length
+                    
+                    if(checkedCount >= 3) {
+                        $('.custom-checkbox').prop('disabled', true)
+                    } else {
+                        $('.custom-checkbox').prop('disabled', false)
+                    }
+                })
+            })
+        </script>
+    </body>
+  </head>
